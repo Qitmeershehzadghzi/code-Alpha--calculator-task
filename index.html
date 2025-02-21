@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Calculator</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         * {
             margin: 0;
@@ -30,7 +29,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             text-align: center;
             width: 100%;
-            max-width: 400px;
+            max-width: 350px; /* Fix width for proper alignment */
         }
 
         .display {
@@ -92,13 +91,14 @@
             border-radius: 30px;
         }
 
-        /* Responsive Design for Mobile */
+        /* ✅ Mobile Responsive Fix */
         @media (max-width: 480px) {
             .calculator {
+                max-width: 300px; /* Small screens pe calculator ka size adjust */
                 padding: 15px;
             }
             button {
-                height: 50px;
+                height: 55px;
                 font-size: 20px;
             }
             #inputbox {
@@ -107,11 +107,11 @@
             }
         }
 
-        /* Responsive Design for Tablets */
+        /* ✅ Tablet Responsive Fix */
         @media (min-width: 481px) and (max-width: 1024px) {
             .calculator {
-                max-width: 500px;
-                padding: 25px;
+                max-width: 380px; /* Tablet screens pe behtareen size */
+                padding: 20px;
             }
             button {
                 height: 70px;
@@ -125,7 +125,7 @@
     </style>
 </head>
 <body>
-    <h1 style="color: black; text-align: center;">Calculator task by code alpha</h1>
+    <h1 style="color: black; text-align: center;">Responsive Calculator</h1>
     <div class="container">
         <div class="calculator">
             <div class="display">
@@ -157,6 +157,24 @@
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script>
+        let inputbox = document.getElementById("inputbox");
+
+        function getNumber(num) {
+            inputbox.value += num;
+        }
+
+        function clearButton() {
+            inputbox.value = "";
+        }
+
+        function calculator() {
+            try {
+                inputbox.value = eval(inputbox.value);
+            } catch {
+                inputbox.value = "Error";
+            }
+        }
+    </script>
 </body>
 </html>
