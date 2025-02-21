@@ -1,0 +1,88 @@
+
+
+
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: lightcyan;  /* Dark theme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: #1C1C1C; /* Dark gray background */
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.calculator button {
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 90%;  /* Circular buttons */
+    font-size: 24px;
+    font-weight: italic;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+/* Default button color */
+.calculator button {
+    background: #333;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Orange buttons (Operators) */
+.calculator .operator {
+    background: #FF9500;
+    color: white;
+    /* width: 145px ; */
+      /* बाकी बटनों के बराबर */
+      border-radius: 90%;
+}
+
+/* Equal button */
+.calculator .equal {
+    background: #FF9500;
+    color: white;
+}
+
+/* Number buttons hover effect */
+.calculator button:hover {
+    background: orange;
+}
+
+/* Operator button hover */
+.calculator .operator:hover, .calculator .equal:hover {
+    background: #cc7a00;
+}
+
+/* Display screen */
+.calcDiv.display {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#inputbox {
+    width: 100%;
+    height: 80px;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px;
+    background: #505050;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.calculator .operator.ac {
+    width: 70px;  /* बाकी बटनों के बराबर */
+    border-radius: 90%;  /* गोल बटन */
+}
